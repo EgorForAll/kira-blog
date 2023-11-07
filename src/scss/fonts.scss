@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "KyivTypeSerif-Regular";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../assets/fonts/KyivTypeSerif-Regular.woff") format("woff"),
+    url("../assets/fonts/KyivTypeSerif-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "KyivTypeSerif-Bold";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../assets/fonts/KyivTypeSerif-Bold.woff") format("woff"),
+    url("../assets/fonts/KyivTypeSerif-Bold.woff2") format("woff2");
+}
