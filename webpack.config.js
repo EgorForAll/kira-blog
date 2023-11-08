@@ -29,14 +29,13 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader']
       },
       {
-        test: /\.(png|jpe?g|svg|webp|ico)$/i,
-        type: 'asset/resource'
+        test: /\.(png|jpe?g|gif|svg|webp|ico)$/i,
+        type: mode === 'production' ? 'asset' : 'asset/resource'
       },
       {
         test: /\.(woff2?|eot|ttf|otf)$/i,
         type: 'asset/resource'
       },
-      { test: /\.svg$/, use: 'svg-inline-loader' },
       {
         test: /\.tsx?$/,
         use: 'ts-loader',
@@ -89,8 +88,7 @@ module.exports = {
             plugins: [
               ['gifsicle', { interlaced: true }],
               ['jpegtran', { progressive: true }],
-              ['optipng', { optimizationLevel: 5 }],
-              ['svgo', { name: 'preset-default' }]
+              ['optipng', { optimizationLevel: 5 }]
             ]
           }
         }

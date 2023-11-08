@@ -1,0 +1,5 @@
+@mixin container() {
+  margin: 0 100px;
+  justify-content: space-between;
+  align-items: center;
+}

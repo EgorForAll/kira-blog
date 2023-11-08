@@ -1,11 +1,11 @@
 import * as React from 'react';
-import Image from '../../assets/images/cat.png';
+import Header from '../layout/header/header';
+import Profile from '../blocks/profile/profile';
 
 const App = () => {
   return (
     <>
-      <div>Приложение на React</div>
-      <img src={Image} />
+      <Header />
     </>
   );
 };
