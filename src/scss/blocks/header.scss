@@ -2,14 +2,21 @@ header {
   min-height: 100px;
   display: flex;
   align-items: center;
+  @media (max-width: $desktop-width) {
+    min-height: 70px;
+  }
 }
 
 .container {
   @include container;
+  justify-content: space-between;
 }
 
 .email {
   font-family: $regular;
   font-size: 18px;
   margin-right: 10px;
+  @media (max-width: $desktop-width) {
+    font-size: 12px;
+  }
 }
