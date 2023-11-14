@@ -17,11 +17,19 @@
 }
 
 .logo-svg {
-  width: 195px;
-  height: 56px;
-  @media (max-width: $desktop-width) {
+  @media (min-width: $mobile-width) {
     width: 105px;
     height: 40px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 145px;
+    height: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 195px;
+    height: 56px;
   }
 }
 

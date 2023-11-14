@@ -1,0 +1,44 @@
+.footer__container {
+  @include container();
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (min-width: $tablet-width) {
+    height: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 170px;
+  }
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__link {
+  color: #4b5661;
+  font-family: $regular;
+  margin-bottom: 5px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $mobile-width) {
+    font-size: 14px;
+  }
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+  }
+  @media (min-width: $desktop-width) {
+    font-size: 23px;
+  }
+}
