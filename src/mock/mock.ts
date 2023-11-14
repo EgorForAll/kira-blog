@@ -4,6 +4,11 @@ import DoorImg from '../assets/images/door.jpg';
 import MouseImg from '../assets/images/mouse.jpg';
 import SofaImg from '../assets/images/sofa.jpg';
 import AvaImg from '../assets/images/ava.jpg';
+import DoctorImg from '../assets/images/doctor.jpg';
+import RelaxImg from '../assets/images/relax.jpg';
+import StickImg from '../assets/images/stick.jpg';
+import HostImg from '../assets/images/host.jpg';
+import HugImg from '../assets/images/hug.jpg';
 
 export const posts = [
   {
@@ -53,5 +58,45 @@ export const posts = [
     date: '06.11.2023',
     likes: 10,
     comments: 10
+  },
+  {
+    id: 6,
+    url_photo: DoctorImg,
+    text: 'Cегодня прием у ветеринара. Очень нервничаю, но рядом любимый хозяин',
+    date: '07.11.2023',
+    likes: 5,
+    comments: 0
+  },
+  {
+    id: 7,
+    url_photo: StickImg,
+    text: 'Кто-нибудь поиграйте со мной',
+    date: '08.11.2023',
+    likes: 1,
+    comments: 0
+  },
+  {
+    id: 8,
+    url_photo: HugImg,
+    text: 'Обнимаемся с любимым хозяином после долгой разлуки',
+    date: '09.11.2023',
+    likes: 2,
+    comments: 0
+  },
+  {
+    id: 9,
+    url_photo: HostImg,
+    text: 'Когда он уже наиграется сам и будет играть со мной',
+    date: '10.11.2023',
+    likes: 2,
+    comments: 0
+  },
+  {
+    id: 8,
+    url_photo: RelaxImg,
+    text: 'Новая зона отдыха. Панорамный вид, мягкий диван, все дела...',
+    date: '11.11.2023',
+    likes: 2,
+    comments: 0
   }
 ];

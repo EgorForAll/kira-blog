@@ -2,16 +2,10 @@ import * as React from 'react';
 import { useState } from 'react';
 import DisplayLikes from '../../ui/display-likes/display-likes';
 import DisplayComments from '../../ui/display-comments/display-comments';
+import { IPosts } from '../../../models/IPosts';
 
 interface PostType {
-  item: {
-    id: number;
-    url_photo: string;
-    text: string;
-    date: string;
-    likes: number;
-    comments: number;
-  };
+  item: IPosts;
 }
 
 const TableItem: React.FC<PostType> = ({ item }) => {

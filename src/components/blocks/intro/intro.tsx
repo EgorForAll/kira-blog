@@ -3,7 +3,7 @@ import KiraAva from '../../../assets/images/ava.jpg';
 import ListSvg from '../../svg/list/list';
 import TableSvg from '../../svg/table/table';
 
-const Intro = () => {
+const Intro: React.FC = () => {
   return (
     <section className="intro col-12">
       <div className="intro__container d-flex">
