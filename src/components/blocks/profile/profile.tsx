@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Avatar from '../../svg/avatar';
+import Avatar from '../../svg/avatar/avatar';
 
 const Profile = () => {
   return (

@@ -14,9 +14,6 @@
   @include container();
   display: flex;
   justify-content: space-between;
-  @media (max-width: $desktop-width) {
-    justify-content: flex-start;
-  }
 }
 
 .intro__text {

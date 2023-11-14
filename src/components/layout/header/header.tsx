@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Logo from '../../svg/logo';
+import Logo from '../../svg/logo/logo';
 import Profile from '../../blocks/profile/profile';
 
 const Header = () => {

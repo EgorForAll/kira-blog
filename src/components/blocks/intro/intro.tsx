@@ -1,7 +1,7 @@
 import * as React from 'react';
 import KiraAva from '../../../assets/images/ava.jpg';
-import ListSvg from '../../svg/list';
-import TableSvg from '../../svg/table';
+import ListSvg from '../../svg/list/list';
+import TableSvg from '../../svg/table/table';
 
 const Intro = () => {
   return (
