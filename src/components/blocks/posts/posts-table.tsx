@@ -15,7 +15,7 @@ const PostsTable: React.FC = () => {
       <div className="posts__container pt-4 pt-lg-5">
         <div className="posts__layout">
           {currentPhotos.map((item, index) => (
-            <TableItem item={item} key={index} />
+            <TableItem post={item} key={index} />
           ))}
         </div>
         <Pagination

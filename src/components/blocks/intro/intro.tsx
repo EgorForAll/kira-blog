@@ -18,7 +18,7 @@ const Intro: React.FC = () => {
             <button className="tabs__button">
               <ListSvg />
             </button>
-            <button className="tabs__button">
+            <button className="tabs__button tab-active">
               <TableSvg />
             </button>
           </div>

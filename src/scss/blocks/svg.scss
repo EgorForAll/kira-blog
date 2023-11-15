@@ -42,6 +42,32 @@
   }
 }
 
+.social-media .bi-heart-fill {
+  width: 36px;
+  height: 36px;
+  fill: $dark-blue;
+  transition: opacity 0.3s ease;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.social-media .bi-chat-fill {
+  width: 36px;
+  height: 40px;
+  fill: $dark-blue;
+  transform: translateY(-4px);
+  transition: opacity 0.3s ease;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.social-media .table__item-number {
+  color: $dark-blue;
+  font-size: 18px;
+}
+
 .bi-chat-fill {
   width: 48px;
   height: 48px;
