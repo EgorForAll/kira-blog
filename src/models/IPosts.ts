@@ -1,12 +1,14 @@
+interface IResponse {
+  id: string;
+  user: string;
+  text: string;
+}
+
 export interface IComments {
   id: string;
   user: string;
   text: string;
-  response?: {
-    id: string;
-    user: string;
-    text: string;
-  };
+  response?: IResponse[];
 }
 
 export interface IPosts {

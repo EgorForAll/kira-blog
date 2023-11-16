@@ -1,21 +1,24 @@
 import * as React from 'react';
-import CommentChat from '../comment-chat/comment-chat';
+import DoubleChat from '../chats/double-chat/double-chat';
+import OneChat from '../chats/one-chat/one-chat';
 import { IComments } from '../../../models/IPosts';
 
-interface CommentType {
+interface CommentsType {
   comments: IComments[];
 }
 
-const Comments: React.FC<CommentType> = ({ comments }) => {
+const Comments: React.FC<CommentsType> = ({ comments }) => {
   return (
-    <div className="comments">
-      {comments.map((item, index) => (
-        <div key={index} className="comments__chat">
-          <div className="comments__chat-first">
-            <CommentChat comment={item} />
-          </div>
-        </div>
-      ))}
+    <div className="comments animate__animated animate__fadeInDown">
+      <div className="comments__chat">
+        {comments.map((item) =>
+          item.response ? (
+            <DoubleChat key={item.id} comment={item} />
+          ) : (
+            <OneChat key={item.id} comment={item} />
+          )
+        )}
+      </div>
     </div>
   );
 };

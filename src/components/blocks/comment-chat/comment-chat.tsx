@@ -4,9 +4,11 @@ import Avatar from '../../svg/avatar/avatar';
 
 interface CommentType {
   comment: IComments;
+  isSecond: boolean;
 }
 
-const CommentChat: React.FC<CommentType> = ({ comment }) => {
+const CommentChat: React.FC<CommentType> = ({ comment, isSecond }) => {
+  const classText: string = isSecond ? 'chat__message-text--second' : 'chat__message-text';
   return (
     <div className="chat">
       <div className="chat__user">
@@ -16,8 +18,8 @@ const CommentChat: React.FC<CommentType> = ({ comment }) => {
         <div className="chat__user-name">{comment.user}</div>
       </div>
       <div className="chat__message">
-        <p className="chat__message-text">{comment.text}</p>
-        <button className="chat__button">Ответить</button>
+        <p className={classText}>{comment.text}</p>
+        {!isSecond && <button className="chat__button">Ответить</button>}
       </div>
     </div>
   );

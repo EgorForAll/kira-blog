@@ -23,11 +23,13 @@ export const posts = [
         id: nanoid(),
         user: 'Alex',
         text: 'Какие настолки предпочитаете?',
-        response: {
-          id: nanoid(),
-          user: 'Julia',
-          text: 'Те, что с кубиками!'
-        }
+        response: [
+          {
+            id: nanoid(),
+            user: 'Julia',
+            text: 'Те, что с кубиками!'
+          }
+        ]
       }
     ]
   },
@@ -63,11 +65,13 @@ export const posts = [
         id: nanoid(),
         user: 'Natasha',
         text: 'Кира, что с тобой?',
-        response: {
-          id: nanoid(),
-          user: 'Kira',
-          text: 'Мало кормят'
-        }
+        response: [
+          {
+            id: nanoid(),
+            user: 'Kira',
+            text: 'Мало кормят'
+          }
+        ]
       }
     ]
   },
@@ -117,11 +121,13 @@ export const posts = [
         id: nanoid(),
         user: 'Dan',
         text: 'Почему с такой симпапулькой не играют? Я буду жаловаться!',
-        response: {
-          id: nanoid(),
-          user: 'Kira',
-          text: 'Просто хозяева очень заняты'
-        }
+        response: [
+          {
+            id: nanoid(),
+            user: 'Kira',
+            text: 'Просто хозяева очень заняты'
+          }
+        ]
       }
     ]
   },

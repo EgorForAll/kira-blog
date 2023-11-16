@@ -1,9 +1,9 @@
 import { createRoot } from 'react-dom/client';
 import './src/scss/main.scss';
+import 'animate.css';
 import App from './src/components/app/app';
 import * as React from 'react';
 
-const domNode = document.querySelector('#root');
-const root = createRoot(domNode);
+const root = createRoot(document.getElementById('root') as Element);
 
 root.render(<App />);

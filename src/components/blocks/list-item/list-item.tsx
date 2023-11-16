@@ -11,7 +11,10 @@ interface PostType {
 const ListItem: React.FC<PostType> = ({ post }) => {
   const [isCommentMode, setCommentMode] = React.useState<boolean>(false);
   const commentsNumber = post.comments ? post.comments.length : 0;
-
+  const responseNumber = post.comments
+    ? post.comments.reduce((sum, cur) => (cur.response ? sum + cur.response.length : sum), 0)
+    : 0;
+  const totalComments = commentsNumber + responseNumber;
   return (
     <li className="posts-list__item ">
       <div className="posts-list__photo-wrapper">
@@ -28,12 +31,12 @@ const ListItem: React.FC<PostType> = ({ post }) => {
             <DisplayLikes likes={post.likes} />
           </button>
           <button className="post-list__button" onClick={() => setCommentMode(!isCommentMode)}>
-            <DisplayComments commentsNumber={commentsNumber} />
+            <DisplayComments commentsNumber={totalComments} />
           </button>
         </div>
         <div className="posts-list__date">{post.date}</div>
       </div>
-      {isCommentMode && <Comments comments={post.comments} />}
+      {isCommentMode && post.comments && <Comments comments={post.comments} />}
     </li>
   );
 };
