@@ -3,6 +3,8 @@ import { IPosts } from '../../../models/IPosts';
 import DisplayLikes from '../../ui/display-likes/display-likes';
 import DisplayComments from '../../ui/display-comments/display-comments';
 import Comments from '../comments/comments';
+import Avatar from '../../svg/avatar/avatar';
+import YourComment from '../your-cooment/your-comment';
 
 interface PostType {
   post: IPosts;
@@ -37,6 +39,7 @@ const ListItem: React.FC<PostType> = ({ post }) => {
         <div className="posts-list__date">{post.date}</div>
       </div>
       {isCommentMode && post.comments && <Comments comments={post.comments} />}
+      {isCommentMode && <YourComment comments={post.comments} />}
     </li>
   );
 };

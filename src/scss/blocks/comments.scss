@@ -4,6 +4,8 @@
   justify-content: flex-start;
   align-items: center;
   min-height: 100px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 20px;
 }
 
 .comments__chat {
@@ -65,6 +67,11 @@
   justify-content: center;
 }
 
+.chat__user-img {
+  display: flex;
+  justify-content: center;
+}
+
 .chat__user-name {
   text-align: center;
 }
@@ -115,6 +122,49 @@
   border: none;
   transition: color 0.3s ease;
 
+  &:hover {
+    color: #333;
+  }
+}
+
+.your-comment {
+  width: 70%;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  font-family: $regular;
+}
+
+.your-comment__user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.your-comment__user-name {
+  text-align: center;
+}
+
+.your-comment__text {
+  width: 100%;
+  margin-left: 30px;
+}
+
+.your-comment__input {
+  resize: none;
+  width: 100%;
+
+  padding: 10px 15px;
+  border: 1px solid rgb(143, 143, 143);
+  border-radius: 10px;
+}
+
+.your-comment__submit {
+  background-color: transparent;
+  color: $dark-blue;
+  border: none;
+  font-size: 16px;
   &:hover {
     color: #333;
   }
