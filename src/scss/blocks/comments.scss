@@ -85,6 +85,16 @@
   color: #fff;
   border-radius: 20px;
 
+  @media (min-width: $mobile-width) {
+    font-size: 14px;
+  }
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+  }
+
   &::before {
     position: absolute;
     content: '';
@@ -103,6 +113,15 @@
   background-color: #da8e90;
   color: #fff;
   border-radius: 20px;
+  @media (min-width: $mobile-width) {
+    font-size: 14px;
+  }
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+  }
   &::before {
     width: 10px;
     position: absolute;
@@ -128,12 +147,17 @@
 }
 
 .your-comment {
-  width: 70%;
   min-height: 70px;
   display: flex;
   align-items: center;
   margin-top: 30px;
   font-family: $regular;
+  @media (min-width: $mobile-width) {
+    width: 100%;
+  }
+  @media (min-width: $desktop-width) {
+    width: 70%;
+  }
 }
 
 .your-comment__user {

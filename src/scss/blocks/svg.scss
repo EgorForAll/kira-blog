@@ -47,17 +47,34 @@
   height: 36px;
   fill: $dark-blue;
   transition: opacity 0.3s ease;
+
+  @media (min-width: $mobile-width) {
+    width: 30px;
+    height: 30px;
+  }
+  @media (min-width: $desktop-width) {
+    width: 36px;
+    height: 36px;
+  }
   &:hover {
     opacity: 0.5;
   }
 }
 
 .social-media .bi-chat-fill {
-  width: 36px;
-  height: 40px;
   fill: $dark-blue;
-  transform: translateY(-4px);
+
   transition: opacity 0.3s ease;
+  @media (min-width: $mobile-width) {
+    width: 30px;
+    height: 34px;
+    transform: translateY(-2px);
+  }
+  @media (min-width: $desktop-width) {
+    width: 36px;
+    height: 40px;
+    transform: translateY(-4px);
+  }
   &:hover {
     opacity: 0.5;
   }

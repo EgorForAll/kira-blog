@@ -10,14 +10,30 @@
   width: 700px;
   display: flex;
   flex-direction: column;
+  @media (min-width: $mobile-width) {
+    margin: 10px 20px;
+  }
+  @media (min-width: $tablet-width) {
+    margin: 20px 100px;
+  }
 }
 
 .posts-list__photo-wrapper {
   margin: 0 auto;
   display: block;
   position: relative;
-  width: 500px;
-  height: 400px;
+  @media (min-width: $mobile-width) {
+    width: 260px;
+    height: 300px;
+  }
+  @media (min-width: $tablet-width) {
+    width: 370px;
+    height: 410px;
+  }
+  @media (min-width: $desktop-width) {
+    width: 500px;
+    height: 400px;
+  }
 }
 
 .posts-list__photo {
@@ -30,11 +46,18 @@
 .posts-list__item {
   display: flex;
   flex-direction: column;
-  padding: 30px 50px;
+
   border-radius: 10px;
   margin-bottom: 40px;
   background-color: $light-blue;
   box-shadow: 5px 3px 3px #d9d9d9;
+
+  @media (min-width: $mobile-width) {
+    padding: 15px 25px;
+  }
+  @media (min-width: $desktop-width) {
+    padding: 30px 50px;
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -44,8 +67,16 @@
 .posts-list__text {
   margin: 20px 0;
   font-family: $regular;
-  font-size: 20px;
   color: #333;
+  @media (min-width: $mobile-width) {
+    font-size: 16px;
+  }
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+  }
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+  }
 }
 
 .posts-list__text-subtitle {
@@ -65,8 +96,17 @@
 
 .posts-list__date {
   font-family: $regular;
-  font-size: 20px;
+
   color: $dark-blue;
+  @media (min-width: $mobile-width) {
+    font-size: 16px;
+  }
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+  }
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+  }
 }
 
 .post-list__button {
