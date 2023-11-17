@@ -1,6 +1,8 @@
 .posts-list {
   width: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
@@ -112,4 +114,19 @@
 .post-list__button {
   background-color: transparent;
   border: none;
+}
+
+.pagination-list {
+  padding: 15px 25px;
+  background-color: $light-blue;
+  color: #fff;
+  font-family: $regular;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 30px;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: $dark-blue;
+  }
 }

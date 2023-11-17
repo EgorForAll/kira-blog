@@ -1,9 +1,13 @@
 import * as React from 'react';
 import TableItem from '../table-item/table-item';
 import Pagination from '../pagination/pagination';
-import { posts } from '../../../mock/mock';
+import { IPosts } from '../../../models/IPosts';
 
-const PostsTable: React.FC = () => {
+interface PostsTypes {
+  posts: IPosts[];
+}
+
+const PostsTable: React.FC<PostsTypes> = ({ posts }) => {
   const [currentPage, setCurrentPage] = React.useState<number>(1);
   const [photosPerPage] = React.useState<number>(9);
   const lastPhotosIndex = currentPage * photosPerPage;

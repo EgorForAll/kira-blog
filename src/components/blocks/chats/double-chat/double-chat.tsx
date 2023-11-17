@@ -14,7 +14,9 @@ const DoubleChat: React.FC<CommentType> = ({ comment }) => {
       </div>
       <div className="comments__chat-second">
         {comment.response &&
-          comment.response.map((item) => <CommentChat comment={item} isSecond={true} />)}
+          comment.response.map((item) => (
+            <CommentChat key={item.id} comment={item} isSecond={true} />
+          ))}
       </div>
     </>
   );

@@ -61,12 +61,12 @@
     background-color: #d9d9d9;
   }
 
+  &:disabled {
+    background-color: #d9d9d9;
+  }
+
   @media (max-width: $desktop-width) {
     width: 40px;
     height: 40px;
   }
-}
-
-.tab-active {
-  background-color: rgb(255, 224, 224);
 }
