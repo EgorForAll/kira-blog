@@ -13,13 +13,14 @@ const Comments: React.FC<CommentsType> = ({ comments }) => {
     <>
       <div className="comments animate__animated animate__fadeInDown">
         <div className="comments__chat">
-          {comments.map((item) =>
-            item.response ? (
-              <DoubleChat key={item.id} comment={item} />
-            ) : (
-              <OneChat key={item.id} comment={item} />
-            )
-          )}
+          {comments &&
+            comments.map((item) =>
+              item.response ? (
+                <DoubleChat key={item.id} comment={item} />
+              ) : (
+                <OneChat key={item.id} comment={item} />
+              )
+            )}
         </div>
       </div>
     </>

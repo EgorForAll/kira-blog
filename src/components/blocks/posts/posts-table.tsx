@@ -2,6 +2,8 @@ import * as React from 'react';
 import TableItem from '../table-item/table-item';
 import Pagination from '../pagination/pagination';
 import { IPosts } from '../../../models/IPosts';
+import ModalWindow from '../modal-window/modal-window';
+import { useAppSelector } from '../../../hooks/hooks';
 
 interface PostsTypes {
   posts: IPosts[];
@@ -9,6 +11,7 @@ interface PostsTypes {
 
 const PostsTable: React.FC<PostsTypes> = ({ posts }) => {
   const [currentPage, setCurrentPage] = React.useState<number>(1);
+  const [currentPost, setCurrentPost] = React.useState<IPosts | null>(null);
   const [photosPerPage] = React.useState<number>(9);
   const lastPhotosIndex = currentPage * photosPerPage;
   const firstPhotosIndex = lastPhotosIndex - photosPerPage;
@@ -19,7 +22,12 @@ const PostsTable: React.FC<PostsTypes> = ({ posts }) => {
       <div className="posts__container pt-4 pt-lg-5">
         <div className="posts__layout">
           {currentPhotos.map((item, index) => (
-            <TableItem post={item} key={index} />
+            <TableItem
+              post={item}
+              currentPost={currentPost}
+              setCurrentPost={setCurrentPost}
+              key={index}
+            />
           ))}
         </div>
         <Pagination
@@ -28,6 +36,7 @@ const PostsTable: React.FC<PostsTypes> = ({ posts }) => {
           totalPhotos={posts.length}
         />
       </div>
+      {currentPost && <ModalWindow setCurrentPost={setCurrentPost} post={currentPost} />}
     </section>
   );
 };
