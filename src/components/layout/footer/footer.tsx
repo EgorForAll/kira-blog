@@ -3,7 +3,7 @@ import Logo from '../../svg/logo/logo';
 
 const Footer: React.FC = () => {
   return (
-    <footer>
+    <footer className="footer">
       <div className="footer__container">
         <Logo />
         <div className="footer__links">

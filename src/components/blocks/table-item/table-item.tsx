@@ -5,16 +5,16 @@ import DisplayComments from '../../ui/display-comments/display-comments';
 import { IPosts } from '../../../models/IPosts';
 import { useAppDispatch } from '../../../hooks/hooks';
 import { postsSlice } from '../../../store/reducer/reducer';
+import { countComments } from '../../../utils/utils';
 
 interface PostType {
   post: IPosts;
-  currentPost: IPosts | null;
   setCurrentPost: (post: IPosts) => void;
 }
 
-const TableItem: React.FC<PostType> = ({ post, currentPost, setCurrentPost }) => {
+const TableItem: React.FC<PostType> = ({ post, setCurrentPost }) => {
   const [hovered, setHovered] = useState<boolean>(false);
-  const commentsNumber = post.comments ? post.comments.length : 0;
+  const totalComments = countComments(post);
   return (
     <>
       <div
@@ -26,7 +26,7 @@ const TableItem: React.FC<PostType> = ({ post, currentPost, setCurrentPost }) =>
           <div className="tabel__item-overlay">
             <div className="tabel__item-content">
               <DisplayLikes likes={post.likes} />
-              <DisplayComments commentsNumber={commentsNumber} />
+              <DisplayComments commentsNumber={totalComments} />
             </div>
           </div>
         )}

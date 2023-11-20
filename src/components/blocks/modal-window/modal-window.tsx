@@ -4,6 +4,7 @@ import DisplayComments from '../../ui/display-comments/display-comments';
 import Comments from '../comments/comments';
 import YourComment from '../your-cooment/your-comment';
 import { IPosts } from '../../../models/IPosts';
+import { countComments } from '../../../utils/utils';
 
 interface CurrentPostType {
   setCurrentPost: (post: IPosts | null) => void;
@@ -11,15 +12,20 @@ interface CurrentPostType {
 }
 
 const ModalWindow: React.FC<CurrentPostType> = ({ setCurrentPost, post }) => {
-  const commentsNumber = post.comments ? post.comments.length : 0;
-  const responseNumber = post.comments
-    ? post.comments.reduce((sum, cur) => (cur.response ? sum + cur.response.length : sum), 0)
-    : 0;
-  const totalComments = commentsNumber + responseNumber;
+  const ModalRef = React.useRef<HTMLDivElement>();
+  const totalComments = countComments(post);
+
+  const closeModalWindow = () => {
+    ModalRef.current.style.animation = 'fadeOut 0.3s forwards';
+    setTimeout(() => {
+      setCurrentPost(null);
+    }, 300);
+  };
+
   return (
-    <div className="modal-window">
+    <div className="modal-window" ref={ModalRef}>
       <div className="modal-window__header">
-        <button className="modal-window__close" onClick={() => setCurrentPost(null)}></button>
+        <button className="modal-window__close" onClick={() => closeModalWindow()}></button>
       </div>
       <div className="modal-window__img-wrapper">
         <img src={post.url_photo} alt={post.text} className="modal-window__img" />

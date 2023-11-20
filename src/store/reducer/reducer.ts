@@ -4,11 +4,13 @@ import { IPosts } from '../../models/IPosts';
 interface IState {
   isTableView: boolean;
   posts: IPosts[];
+  currentPost: IPosts | null;
 }
 
 const initialState: IState = {
   isTableView: true,
-  posts: []
+  posts: [],
+  currentPost: null
 };
 
 export const postsSlice = createSlice({
@@ -23,6 +25,9 @@ export const postsSlice = createSlice({
     },
     setTableView(state) {
       state.isTableView = true;
+    },
+    setCurrentPost(state, action: PayloadAction<IPosts | null>) {
+      state.currentPost = action.payload;
     }
   }
 });

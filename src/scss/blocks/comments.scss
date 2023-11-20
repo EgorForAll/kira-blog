@@ -3,9 +3,13 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  min-height: 100px;
   border-bottom: 1px solid #333;
-  padding-bottom: 20px;
+  @media (min-width: $mobile-width) {
+    padding-bottom: 0;
+  }
+  @media (min-width: $desktop-width) {
+    padding-bottom: 20px;
+  }
 }
 
 .comments__chat {
@@ -13,11 +17,16 @@
 }
 
 .comments__chat-first {
-  margin-top: 30px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  @media (min-width: $mobile-width) {
+    margin-top: 10px;
+  }
+  @media (min-width: $desktop-width) {
+    margin-top: 30px;
+  }
 }
 
 .comments__chat-second {
@@ -86,10 +95,10 @@
   border-radius: 20px;
 
   @media (min-width: $mobile-width) {
-    font-size: 14px;
+    font-size: 12px;
   }
   @media (min-width: $tablet-width) {
-    font-size: 16px;
+    font-size: 14px;
   }
   @media (min-width: $desktop-width) {
     font-size: 18px;
@@ -137,9 +146,18 @@
   background-color: transparent;
   color: $dark-blue;
   font-family: $regular;
-  font-size: 16px;
   border: none;
   transition: color 0.3s ease;
+
+  @media (min-width: $mobile-width) {
+    font-size: 12px;
+  }
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+  }
+  @media (min-width: $desktop-width) {
+    font-size: 16px;
+  }
 
   &:hover {
     color: #333;
@@ -150,13 +168,16 @@
   min-height: 70px;
   display: flex;
   align-items: center;
-  margin-top: 30px;
+
   font-family: $regular;
   @media (min-width: $mobile-width) {
     width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   @media (min-width: $desktop-width) {
     width: 70%;
+    margin-top: 30px;
   }
 }
 
@@ -188,7 +209,16 @@
   background-color: transparent;
   color: $dark-blue;
   border: none;
-  font-size: 16px;
+
+  @media (min-width: $mobile-width) {
+    font-size: 12px;
+  }
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+  }
+  @media (min-width: $desktop-width) {
+    font-size: 16px;
+  }
   &:hover {
     color: #333;
   }

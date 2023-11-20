@@ -3,8 +3,8 @@ import { IPosts } from '../../../models/IPosts';
 import DisplayLikes from '../../ui/display-likes/display-likes';
 import DisplayComments from '../../ui/display-comments/display-comments';
 import Comments from '../comments/comments';
-import Avatar from '../../svg/avatar/avatar';
 import YourComment from '../your-cooment/your-comment';
+import { countComments } from '../../../utils/utils';
 
 interface PostType {
   post: IPosts;
@@ -12,11 +12,7 @@ interface PostType {
 
 const ListItem: React.FC<PostType> = ({ post }) => {
   const [isCommentMode, setCommentMode] = React.useState<boolean>(false);
-  const commentsNumber = post.comments ? post.comments.length : 0;
-  const responseNumber = post.comments
-    ? post.comments.reduce((sum, cur) => (cur.response ? sum + cur.response.length : sum), 0)
-    : 0;
-  const totalComments = commentsNumber + responseNumber;
+  const totalComments = countComments(post);
   return (
     <li className="posts-list__item ">
       <div className="posts-list__photo-wrapper">

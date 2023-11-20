@@ -3,7 +3,7 @@ import Header from '../layout/header/header';
 import Footer from '../layout/footer/footer';
 import { postsSlice } from '../../store/reducer/reducer';
 import { IPosts } from '../../models/IPosts';
-import { useAppDispatch } from '../../hooks/hooks';
+import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
 import { posts } from '../../mock/mock';
 import MainPage from '../pages/main-page';
 
